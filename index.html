@@ -3,45 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Ashutosh Chakragiri</title>
     <link href="main.min.css" rel="stylesheet" />
   </head>
   <body>
-    <!-- <nav class="sidebar navbar-expand-sm navbar-dark bg-dark shadow sticky-top">
-      <div class="container-fluid">
-        <button class="navbar-brand btn btn-default">Hi</button>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarCollapse"
-          aria-controls="navbarCollapse"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-          <ul class="navbar-side-nav ml-auto">
-            <li class="nav-item mx-2 px-2">
-              <button class="nav-link btn btn-default">About Me</button>
-            </li>
-            <li class="nav-item mx-2 px-2">
-              <button class="nav-link btn btn-default">Experience</button>
-            </li>
-            <li class="nav-item mx-2 px-2">
-              <button class="nav-link btn btn-default">Skills</button>
-            </li>
-            <li class="nav-item mx-2 px-2">
-              <button class="nav-link btn btn-default">Awards</button>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav> -->
     <div class="container-fluid row bg-dark">
+      <!-- Navigation -->
       <nav
         class="container-fluid text-center col-lg-3 col-sm-12 bg-primary px-5 py-2 p-lg-5"
+        id="navbar"
       >
         <div class="navbar-brand d-lg-none">Ashutosh Chakragiri</div>
         <img src="assets/anon.png" alt="" id="pfp" />
@@ -59,10 +29,18 @@
         <div class="collapse navbar-collapse d-lg-block" id="navbarCollapse">
           <ul class="navbar-nav text-center ml-auto">
             <li class="nav-item mx-2 px-2">
-              <button class="nav-link btn btn-default btn-block">About</button>
+              <button
+                class="nav-link btn btn-default btn-block"
+                onclick="showAbout()"
+              >
+                About
+              </button>
             </li>
             <li class="nav-item mx-2 px-2">
-              <button class="nav-link btn btn-default btn-block">
+              <button
+                class="nav-link btn btn-default btn-block"
+                onclick="showExperience()"
+              >
                 Experience
               </button>
             </li>
@@ -75,22 +53,34 @@
           </ul>
         </div>
       </nav>
+      <!-- About -->
       <section
         class="container-fluid col-lg-9 col-sm-12 bg-dark text-light"
-        id="hero"
+        id="about"
+        style="position: relative"
       >
-        <div class="container p-5">
-          <h1 class="display-1">
+        <div class="container landing-container p-5" id="hero-container">
+          <h1 class="display-1 ml-2">
             Ashutosh <span class="text-primary">Chakragiri</span>
           </h1>
-          <div class="row text-carousel-prefix h4 mx-0 px-0 mb-4">
-            <ul class="ml-0" id="text-carousel">
-              Passionate
-              <li class="border-bottom border-primary">AI engineer</li>
-              <li class="border-bottom border-primary">web developer</li>
-              <li class="border-bottom border-primary">mechanical engineer</li>
-              <li class="border-bottom border-primary">student leader</li>
-              <li class="border-bottom border-primary">student leader</li>
+          <div class="row h4 mx-0 px-0 pb-4">
+            <span class="text-carousel-prefix col-1 mr-5">Passionate</span>
+            <ul class="col-3 ml-2" id="text-carousel">
+              <li class="text-carousel-item border-bottom border-primary">
+                AI engineer
+              </li>
+              <li class="text-carousel-item border-bottom border-primary">
+                web developer
+              </li>
+              <li class="text-carousel-item border-bottom border-primary">
+                engineer
+              </li>
+              <li class="text-carousel-item border-bottom border-primary">
+                student leader
+              </li>
+              <li class="text-carousel-item border-bottom border-primary">
+                learner
+              </li>
             </ul>
           </div>
           <a
@@ -121,6 +111,122 @@
           >
             <ion-icon name="logo-github"></ion-icon>
           </a>
+        </div>
+      </section>
+      <!-- Experience -->
+      <section
+        class="container-fluid col-lg-9 col-sm-12 bg-dark text-light d-none"
+        id="experience"
+        style="position: relative"
+      >
+        <div class="container p-5" id="hero-container">
+          <h1 class="display-3">Experience</h1>
+          <h3 class="display-6 py-3">Work</h3>
+          <div class="col-12 py-3">
+            <div class="h3">
+              <span class="saira">Intern</span>
+              <span class="text-normal float-right">Sept. 2020 - Present</span>
+              <br />
+              <span class="h5 saira text-primary">Drones iVue</span>
+            </div>
+            <p>
+              Developing an AI algorithm for autonomous drone collision
+              avoidance system.
+            </p>
+          </div>
+          <hr />
+          <div class="col-12 py-3">
+            <div class="h3">
+              <span class="saira">Fullstack Developer</span>
+              <span class="text-normal float-right">2019 - 2020</span>
+              <br />
+              <span class="h5 saira text-primary">Northview Web Team</span>
+            </div>
+            <p>Developed and maintained Northview High School’s website.</p>
+          </div>
+          <hr />
+          <div class="display-6 py-3">Leadership and Volunteering</div>
+          <div class="col-12 py-3">
+            <div class="h3">
+              <span class="saira">Student Ambassador</span>
+              <span class="text-normal float-right">2020 - Present</span>
+              <br />
+              <span class="h5 saira text-primary"
+                >Georgia Secretary of State Student Ambassadors Program</span
+              >
+            </div>
+            <p>
+              Highly selective and competitive program, sponsored by the Georgia
+              Secretary of State’s Office, to increase civic engagement within
+              the community.
+              <br />
+              Organized and moderated debate between Georgia Senate District 48
+              candidates.
+              <a
+                href="https://www.youtube.com/watch?v=6XHTfq_PfCM&t=13s"
+                target="_5"
+              >
+                Watch here.
+              </a>
+            </p>
+          </div>
+          <hr />
+          <div class="col-12 py-3">
+            <div class="h3">
+              <span class="saira">Student Leader</span>
+              <span class="text-normal float-right">2019 - Present</span>
+              <br />
+              <span class="h5 saira text-primary"
+                >Student Leadership Johns Creek</span
+              >
+            </div>
+            <p>
+              Two-year community service program; selected for class of 2021.
+              <br />
+              Volunteered at The Drake House (2019-2020) to teach essential
+              technology and leadership skills to children of single mothers.
+            </p>
+          </div>
+          <hr />
+          <div class="col-12 py-3">
+            <div class="h3">
+              <span class="saira">Head Web Design and Python Instructor</span>
+              <span class="text-normal float-right">Jun 2020 - Present</span>
+              <br />
+              <span class="h5 saira text-primary">Code Up!</span>
+            </div>
+            <p>
+              Created lesson plans and taught Web Design (HTML, CSS, and
+              JavaScript) and Python to middle and high school students.
+              <br />
+              See our students'
+              <a href="https://www.youtube.com/watch?v=-GIjZsMlyK8" target="_6"
+                >Python</a
+              >
+              or
+              <a href="https://www.youtube.com/watch?v=YvoVvTX-Cqw" target="_7">
+                Web Design
+              </a>
+              projects.
+            </p>
+          </div>
+          <hr />
+          <div class="col-12 py-3">
+            <div class="h3">
+              <span class="saira">Vice President</span>
+              <span class="text-normal float-right">2019 - Present</span>
+              <br />
+              <span class="h5 saira text-primary">
+                Northview Programming Club
+              </span>
+            </div>
+            <p>
+              Create and teach programming lessons to club members. Manage fees
+              and tournament registration. Developed
+              <a href="https://nhsprogram.github.io/" target="_8">website</a>
+              for member registration.
+            </p>
+          </div>
         </div>
       </section>
     </div>
