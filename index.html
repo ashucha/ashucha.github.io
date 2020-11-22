@@ -8,13 +8,44 @@
   </head>
   <body>
     <div class="container-fluid row bg-dark">
+      <!-- Floating Buttons -->
+      <div
+        class="btn-group col-3 mt-5 mr-5 d-none"
+        id="social-btn-group"
+        role="group"
+      >
+        <a href="tel:470-254-3828" class="btn btn-secondary btn-lg" target="_1">
+          <ion-icon name="call"></ion-icon>
+        </a>
+        <a
+          href="mailto:ashucha03@gmail.com"
+          class="btn btn-secondary btn-lg"
+          target="_2"
+        >
+          <ion-icon name="mail"></ion-icon>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/ashutosh-chakragiri/"
+          class="btn btn-secondary btn-lg"
+          target="_3"
+        >
+          <ion-icon name="logo-linkedin"></ion-icon>
+        </a>
+        <a
+          href="https://github.com/ashucha/"
+          class="btn btn-secondary btn-lg"
+          target="_4"
+        >
+          <ion-icon name="logo-github"></ion-icon>
+        </a>
+      </div>
       <!-- Navigation -->
       <nav
-        class="container-fluid text-center col-lg-3 col-sm-12 bg-primary px-5 py-2 p-lg-5"
+        class="container-fluid navbar-dark text-center col-lg-3 col-sm-12 bg-secondary shadow px-5 py-2 p-lg-5"
         id="navbar"
       >
         <div class="navbar-brand d-lg-none">Ashutosh Chakragiri</div>
-        <img src="assets/anon.png" alt="" id="pfp" />
+        <img src="assets/anon.png" alt="" class="mt-5" id="pfp" />
         <button
           class="navbar-toggler"
           type="button"
@@ -26,11 +57,14 @@
         >
           <ion-icon name="menu" size="large"></ion-icon>
         </button>
-        <div class="collapse navbar-collapse d-lg-block" id="navbarCollapse">
-          <ul class="navbar-nav text-center ml-auto">
+        <div
+          class="collapse navbar-collapse p-5 d-lg-block"
+          id="navbarCollapse"
+        >
+          <ul class="navbar-nav text-center px-auto">
             <li class="nav-item mx-2 px-2">
               <button
-                class="nav-link btn btn-default btn-block"
+                class="nav-link btn btn-secondary bg-transparent border-0 btn-block"
                 onclick="showAbout()"
               >
                 About
@@ -38,17 +72,27 @@
             </li>
             <li class="nav-item mx-2 px-2">
               <button
-                class="nav-link btn btn-default btn-block"
+                class="nav-link btn btn-secondary bg-transparent border-0 btn-block"
                 onclick="showExperience()"
               >
                 Experience
               </button>
             </li>
             <li class="nav-item mx-2 px-2">
-              <button class="nav-link btn btn-default btn-block">Skills</button>
+              <button
+                class="nav-link btn btn-secondary bg-transparent border-0 btn-block"
+                onclick="showSkills()"
+              >
+                Skills
+              </button>
             </li>
             <li class="nav-item mx-2 px-2">
-              <button class="nav-link btn btn-default btn-block">Awards</button>
+              <button
+                class="nav-link btn btn-secondary bg-transparent border-0 btn-block"
+                onclick="showAwards()"
+              >
+                Awards
+              </button>
             </li>
           </ul>
         </div>
@@ -138,14 +182,35 @@
           <div class="col-12 py-3">
             <div class="h3">
               <span class="saira">Fullstack Developer</span>
+              <span class="text-normal float-right">Sept. 2020 - Present</span>
+              <br />
+              <span class="h5 saira text-primary"
+                >Johns Hopkins University COVID-19 Design Challenge</span
+              >
+            </div>
+            <p>
+              One of the 150 idea submissions selected by Johns Hopkins
+              University. Developed application for self-reporting COVID cases
+              (positive cases classified by ML algorithm), along with
+              geolocation, to help manage hospital resources based on case
+              density.
+            </p>
+          </div>
+          <hr />
+          <div class="col-12 py-3">
+            <div class="h3">
+              <span class="saira">Fullstack Developer</span>
               <span class="text-normal float-right">2019 - 2020</span>
               <br />
               <span class="h5 saira text-primary">Northview Web Team</span>
             </div>
-            <p>Developed and maintained Northview High School’s website.</p>
+            <p>
+              Developed and maintained Northview High School’s website in a
+              pseudo-professional work setting.
+            </p>
           </div>
           <hr />
-          <div class="display-6 py-3">Leadership and Volunteering</div>
+          <div class="display-6 py-3">Leadership & Volunteering</div>
           <div class="col-12 py-3">
             <div class="h3">
               <span class="saira">Student Ambassador</span>
@@ -166,8 +231,8 @@
                 href="https://www.youtube.com/watch?v=6XHTfq_PfCM&t=13s"
                 target="_5"
               >
-                Watch here.
-              </a>
+                Watch here</a
+              >.
             </p>
           </div>
           <hr />
@@ -204,9 +269,9 @@
                 >Python</a
               >
               or
-              <a href="https://www.youtube.com/watch?v=YvoVvTX-Cqw" target="_7">
-                Web Design
-              </a>
+              <a href="https://www.youtube.com/watch?v=YvoVvTX-Cqw" target="_7"
+                >Web Design</a
+              >
               projects.
             </p>
           </div>
@@ -225,6 +290,65 @@
               and tournament registration. Developed
               <a href="https://nhsprogram.github.io/" target="_8">website</a>
               for member registration.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- Awards -->
+      <section
+        class="container-fluid col-lg-9 col-sm-12 bg-dark text-light d-none"
+        id="awards"
+        style="position: relative"
+      >
+        <div class="container p-5" id="hero-container">
+          <h1 class="display-3">Awards</h1>
+          <div class="col-12 py-3">
+            <div class="h3">
+              <span class="saira">Advanced Placement</span>
+              <span class="text-normal float-right">2020</span>
+              <br />
+              <span class="h5 saira text-primary"
+                >National AP Scholar with Distinction</span
+              >
+            </div>
+            <p>Awarded to 10% of AP test takers.</p>
+          </div>
+          <hr />
+          <div class="col-12 py-3">
+            <div class="h3">
+              <span class="saira">U.S. Department of Energy Science Bowl</span>
+              <span class="text-normal float-right">2020</span>
+              <br />
+              <span class="h5 saira text-primary">3<sup>rd</sup> Place</span>
+            </div>
+            <p>
+              Captained team to 3<sup>rd</sup> place at 2020 National Qualifier.
+            </p>
+          </div>
+          <hr />
+          <div class="col-12 py-3">
+            <div class="h3">
+              <span class="saira">Future Business Leaders of America</span>
+              <span class="text-normal float-right">2019</span>
+              <br />
+              <span class="h5 saira text-primary">Qualified for Nationals</span>
+            </div>
+            <p>
+              Invited to represent Georgia at the 2019 National Leadership
+              Conference in Information Technology.
+            </p>
+          </div>
+          <hr />
+          <div class="col-12 py-3">
+            <div class="h3">
+              <span class="saira">Google Atlanta Hack Cancer + STDs</span>
+              <span class="text-normal float-right">2018</span>
+              <br />
+              <span class="h5 saira text-primary">1<sup>st</sup> Place</span>
+            </div>
+            <p>
+              Developer on team building web application to help cancer patients
+              find resources and answer FAQs.
             </p>
           </div>
         </div>
