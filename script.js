@@ -1,4 +1,4 @@
-if (localStorage.getItem("page") !== "about") {
+if (localStorage.getItem("page") && localStorage.getItem("page") !== "about") {
   $(`#${localStorage.getItem("page")}`).removeClass("d-none");
   $("#social-btn-group").removeClass("d-none");
   $("#about").addClass("d-none");
