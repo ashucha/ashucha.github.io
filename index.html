@@ -45,7 +45,7 @@
         id="navbar"
       >
         <div class="navbar-brand d-lg-none">Ashutosh Chakragiri</div>
-        <img src="assets/anon.png" alt="" class="mt-5" id="pfp" />
+        <img src="assets/pfp.png" alt="" class="mt-5" id="pfp" />
         <button
           class="navbar-toggler"
           type="button"
@@ -64,8 +64,9 @@
           <ul class="navbar-nav text-center px-auto">
             <li class="nav-item mx-2 px-2">
               <button
-                class="nav-link btn btn-secondary bg-transparent border-0 btn-block"
-                onclick="showAbout()"
+                class="nav-link active btn btn-secondary bg-transparent border-0 btn-block"
+                id="show-about"
+                onclick="showAbout(); $('.nav-link').removeClass('active'); $(this).addClass('active');"
               >
                 About
               </button>
@@ -73,7 +74,8 @@
             <li class="nav-item mx-2 px-2">
               <button
                 class="nav-link btn btn-secondary bg-transparent border-0 btn-block"
-                onclick="showExperience()"
+                id="show-experience"
+                onclick="showExperience(); $('.nav-link').removeClass('active'); $(this).addClass('active');"
               >
                 Experience
               </button>
@@ -81,7 +83,8 @@
             <li class="nav-item mx-2 px-2">
               <button
                 class="nav-link btn btn-secondary bg-transparent border-0 btn-block"
-                onclick="showSkills()"
+                id="show-skills"
+                onclick="showSkills(); $('.nav-link').removeClass('active'); $(this).addClass('active');"
               >
                 Skills
               </button>
@@ -89,7 +92,8 @@
             <li class="nav-item mx-2 px-2">
               <button
                 class="nav-link btn btn-secondary bg-transparent border-0 btn-block"
-                onclick="showAwards()"
+                id="show-awards"
+                onclick="showAwards(); $('.nav-link').removeClass('active'); $(this).addClass('active');"
               >
                 Awards
               </button>
@@ -311,7 +315,7 @@
                 >National AP Scholar with Distinction</span
               >
             </div>
-            <p>Awarded to 10% of AP test takers.</p>
+            <p>Awarded to top 10% of AP test takers.</p>
           </div>
           <hr />
           <div class="col-12 py-3">
