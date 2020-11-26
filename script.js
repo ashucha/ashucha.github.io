@@ -129,3 +129,10 @@ $("iframe")
   .on("mouseout", () => {
     $(".pointer").show();
   });
+
+const encrypted = CryptoJS.AES.encrypt("SLJC2021", "555");
+const decrypted = CryptoJS.AES.decrypt(
+  "U2FsdGVkX1/rjNk/9xynkYoGXY4XubcNMHn5Ffts89Q=",
+  "555"
+).toString(CryptoJS.enc.Utf8);
+console.log(decrypted);
