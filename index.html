@@ -47,20 +47,12 @@
         <div class="navbar-brand d-lg-none">Ashutosh Chakragiri</div>
         <img src="assets/pfp.png" alt="" class="mt-5" id="pfp" />
         <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarCollapse"
-          aria-controls="navbarCollapse"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
+          class="btn btn-transparent btn-sm text-light float-left"
+          id="nav-toggler"
         >
           <ion-icon name="menu" size="large"></ion-icon>
         </button>
-        <div
-          class="collapse navbar-collapse p-5 d-lg-block"
-          id="navbarCollapse"
-        >
+        <div class="p-5 d-lg-block" id="nav-container">
           <ul class="navbar-nav text-center px-auto">
             <li class="nav-item mx-2 px-2">
               <button
@@ -96,6 +88,15 @@
                 onclick="showAwards(); $('.nav-link').removeClass('active'); $(this).addClass('active');"
               >
                 Awards
+              </button>
+            </li>
+            <li class="nav-item mx-2 px-2">
+              <button
+                class="nav-link btn btn-secondary bg-transparent border-0 btn-block"
+                id="show-resume-and-card"
+                onclick="showResumeAndCard(); $('.nav-link').removeClass('active'); $(this).addClass('active');"
+              >
+                Resume & Card
               </button>
             </li>
           </ul>
@@ -379,6 +380,38 @@
           </div>
         </div>
       </section>
+      <!-- Resume & Card -->
+      <section
+        class="container-fluid col-lg-9 col-sm-12 bg-dark text-light d-none"
+        id="resume-and-card"
+        style="position: relative"
+      >
+        <div class="container p-5" id="hero-container">
+          <h1 class="display-3">Resume & Card</h1>
+          <h3 class="display-6 py-3">
+            Resume
+            <sup>
+              <a href="assets/resume.pdf" target="_9">
+                <ion-icon name="expand" size="small"></ion-icon>
+              </a>
+            </sup>
+          </h3>
+          <iframe src="assets/resume.pdf" class="col-12" id="resume"></iframe>
+          <h3 class="display-6 py-3">Card</h3>
+          <img
+            src="assets/card.png"
+            class="border border-primary col-6"
+            alt="card"
+          />
+        </div>
+      </section>
+    </div>
+    <div class="trail">
+      <div class="pointer" id="pointer1"></div>
+      <div class="pointer" id="pointer2"></div>
+      <div class="pointer" id="pointer3"></div>
+      <div class="pointer" id="pointer4"></div>
+      <div class="pointer" id="pointer5"></div>
     </div>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha3/dist/js/bootstrap.bundle.min.js"
@@ -392,5 +425,8 @@
     ></script>
     <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
     <script src="script.js"></script>
+    <noscript>
+      You need to enable JavaScript for this site to run properly.
+    </noscript>
   </body>
 </html>

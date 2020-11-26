@@ -6,36 +6,34 @@ if (localStorage.getItem("page") && localStorage.getItem("page") !== "about") {
 
 if (localStorage.getItem("link") && localStorage.getItem("link") !== "about") {
   $(".nav-link").removeClass("active");
-  console.log($(`#show-${localStorage.getItem("link")}`).html());
-  $(`#show-${localStorage.getItem("link")}`).addClass("active");
+  $(`#show-${localStorage.getItem("page")}`).addClass("active");
 }
 
 const showAbout = () => {
   window.scrollTo({ top: 0 });
   localStorage.setItem("page", "about");
-  localStorage.setItem("link", "about");
   $("#about").removeClass("d-none");
   $("#experience").addClass("d-none");
   $("#skills").addClass("d-none");
   $("#awards").addClass("d-none");
+  $("#resume-and-card").addClass("d-none");
   $("#social-btn-group").addClass("d-none");
 };
 
 const showExperience = () => {
   window.scrollTo({ top: 0 });
   localStorage.setItem("page", "experience");
-  localStorage.setItem("link", "experience");
   $("#experience").removeClass("d-none");
   $("#social-btn-group").removeClass("d-none");
   $("#about").addClass("d-none");
   $("#skills").addClass("d-none");
   $("#awards").addClass("d-none");
+  $("#resume-and-card").addClass("d-none");
 };
 
 const showSkills = () => {
   window.scrollTo({ top: 0 });
   localStorage.setItem("page", "skills");
-  localStorage.setItem("link", "skills");
   $("#social-btn-group").removeClass("d-none");
   // $("#experience").removeClass("d-none");
   // $("#about").addClass("d-none");
@@ -45,10 +43,89 @@ const showSkills = () => {
 const showAwards = () => {
   window.scrollTo({ top: 0 });
   localStorage.setItem("page", "awards");
-  localStorage.setItem("link", "awards");
   $("#awards").removeClass("d-none");
   $("#social-btn-group").removeClass("d-none");
   $("#about").addClass("d-none");
   $("#experience").addClass("d-none");
   $("#skills").addClass("d-none");
+  $("#resume-and-card").addClass("d-none");
 };
+
+const showResumeAndCard = () => {
+  window.scrollTo({ top: 0 });
+  localStorage.setItem("page", "resume-and-card");
+  $("#resume-and-card").removeClass("d-none");
+  $("#social-btn-group").removeClass("d-none");
+  $("#about").addClass("d-none");
+  $("#experience").addClass("d-none");
+  $("#skills").addClass("d-none");
+  $("#awards").addClass("d-none");
+};
+
+var refreshKeyPressed = false;
+var modifierPressed = false;
+
+var f5key = 116;
+var rkey = 82;
+var modkey = [17, 224, 91, 93];
+
+// Check for refresh keys
+$(document).on("keydown", (e) => {
+  // Check for refresh
+  if (e.which == f5key || (window.modifierPressed && e.which == rkey)) {
+    refreshKeyPressed = true;
+  }
+
+  // Check for modifier
+  if (modkey.indexOf(e.which) >= 0) {
+    modifierPressed = true;
+  }
+});
+
+// Check for refresh keys
+$(document).on("keyup", (e) => {
+  // Check undo keys
+  if (e.which == f5key || e.which == rkey) {
+    refreshKeyPressed = false;
+  }
+
+  // Check for modifier
+  if (modkey.indexOf(e.which) >= 0) {
+    modifierPressed = false;
+  }
+});
+
+$(window).on("beforeunload", (event) => {
+  var message = "not refreshed";
+
+  if (!refreshKeyPressed) {
+    localStorage.clear();
+  }
+});
+
+$(window).on("mousemove", (e) => {
+  $(".pointer").css({ top: e.pageY, left: e.pageX });
+});
+
+$("#nav-toggler").on("click", () => {
+  if ($("#nav-container").hasClass("slide-nav-in")) {
+    $("#nav-container").removeClass("slide-nav-in");
+    $("#nav-container").addClass("slide-nav-out");
+  } else {
+    $("#nav-container").removeClass("slide-nav-out");
+    $("#nav-container").addClass("slide-nav-in");
+  }
+  // $("#nav-container").css({ display: "block !important" });
+});
+
+// $("#nav-toggler").on("click", () => {
+//   $("#nav-container").toggle();
+// });
+
+$("iframe")
+  .on("mouseover", () => {
+    $(".pointer").hide();
+  })
+  .on("mouseout", () => {
+    $(".pointer").show();
+  });
