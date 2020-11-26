@@ -4,7 +4,7 @@ if (localStorage.getItem("page") && localStorage.getItem("page") !== "about") {
   $("#about").addClass("d-none");
 }
 
-if (localStorage.getItem("link") && localStorage.getItem("link") !== "about") {
+if (localStorage.getItem("page") && localStorage.getItem("page") !== "about") {
   $(".nav-link").removeClass("active");
   $(`#show-${localStorage.getItem("page")}`).addClass("active");
 }
