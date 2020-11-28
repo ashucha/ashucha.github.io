@@ -1,18 +1,15 @@
-if (localStorage.getItem("page") && localStorage.getItem("page") !== "about") {
-  $(`#${localStorage.getItem("page")}`).removeClass("d-none");
-  $("#social-btn-group").removeClass("d-none");
-  $("#about").addClass("d-none");
-}
-
-if (localStorage.getItem("page") && localStorage.getItem("page") !== "about") {
+if (localStorage.getItem("page") && localStorage.getItem("page") !== "home") {
   $(".nav-link").removeClass("active");
   $(`#show-${localStorage.getItem("page")}`).addClass("active");
+  $(`#${localStorage.getItem("page")}`).removeClass("d-none");
+  $("#social-btn-group").removeClass("d-none");
+  $("#home").addClass("d-none");
 }
 
-const showAbout = () => {
+const showHome = () => {
   window.scrollTo({ top: 0 });
-  localStorage.setItem("page", "about");
-  $("#about").removeClass("d-none");
+  localStorage.setItem("page", "home");
+  $("#home").removeClass("d-none");
   $("#experience").addClass("d-none");
   $("#skills").addClass("d-none");
   $("#awards").addClass("d-none");
@@ -25,7 +22,7 @@ const showExperience = () => {
   localStorage.setItem("page", "experience");
   $("#experience").removeClass("d-none");
   $("#social-btn-group").removeClass("d-none");
-  $("#about").addClass("d-none");
+  $("#home").addClass("d-none");
   $("#skills").addClass("d-none");
   $("#awards").addClass("d-none");
   $("#resume-and-card").addClass("d-none");
@@ -36,7 +33,7 @@ const showSkills = () => {
   localStorage.setItem("page", "skills");
   $("#social-btn-group").removeClass("d-none");
   // $("#experience").removeClass("d-none");
-  // $("#about").addClass("d-none");
+  // $("#home").addClass("d-none");
   console.log("Nothing yet.");
 };
 
@@ -45,7 +42,7 @@ const showAwards = () => {
   localStorage.setItem("page", "awards");
   $("#awards").removeClass("d-none");
   $("#social-btn-group").removeClass("d-none");
-  $("#about").addClass("d-none");
+  $("#home").addClass("d-none");
   $("#experience").addClass("d-none");
   $("#skills").addClass("d-none");
   $("#resume-and-card").addClass("d-none");
@@ -56,7 +53,7 @@ const showResumeAndCard = () => {
   localStorage.setItem("page", "resume-and-card");
   $("#resume-and-card").removeClass("d-none");
   $("#social-btn-group").removeClass("d-none");
-  $("#about").addClass("d-none");
+  $("#home").addClass("d-none");
   $("#experience").addClass("d-none");
   $("#skills").addClass("d-none");
   $("#awards").addClass("d-none");
@@ -104,7 +101,7 @@ $(window).on("beforeunload", (event) => {
 });
 
 $(window).on("mousemove", (e) => {
-  $(".pointer").css({ top: e.pageY, left: e.pageX });
+  $(".pointer").show().css({ top: e.pageY, left: e.pageX });
 });
 
 $("#nav-toggler").on("click", () => {

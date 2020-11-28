@@ -3,11 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ashutosh Chakragiri</title>
+    <title>Ashutosh (Ashu) Chakragiri</title>
     <link href="main.min.css" rel="stylesheet" />
   </head>
   <body>
-    <div class="container-fluid row bg-dark">
+    <div class="container-fluid row">
       <!-- Floating Buttons -->
       <div
         class="btn-group col-3 mt-5 mr-5 d-none"
@@ -18,7 +18,7 @@
           <ion-icon name="call"></ion-icon>
         </a>
         <a
-          href="mailto:ashucha03@gmail.com"
+          href="mailto:dummy@gmail.com"
           class="btn btn-secondary btn-lg"
           target="_2"
         >
@@ -41,7 +41,7 @@
       </div>
       <!-- Navigation -->
       <nav
-        class="container-fluid navbar-dark text-center col-lg-3 col-sm-12 bg-secondary shadow px-5 py-2 p-lg-5"
+        class="container-fluid navbar-dark text-center col-lg-3 col-sm-12 bg-secondary px-5 py-2 p-lg-5"
         id="navbar"
       >
         <div class="navbar-brand d-lg-none">Ashutosh Chakragiri</div>
@@ -57,6 +57,15 @@
             <li class="nav-item mx-2 px-2">
               <button
                 class="nav-link active btn btn-secondary bg-transparent border-0 btn-block"
+                id="show-home"
+                onclick="showHome(); $('.nav-link').removeClass('active'); $(this).addClass('active');"
+              >
+                Home
+              </button>
+            </li>
+            <li class="nav-item mx-2 px-2">
+              <button
+                class="nav-link btn btn-secondary bg-transparent border-0 btn-block"
                 id="show-about"
                 onclick="showAbout(); $('.nav-link').removeClass('active'); $(this).addClass('active');"
               >
@@ -102,10 +111,10 @@
           </ul>
         </div>
       </nav>
-      <!-- About -->
+      <!-- Home -->
       <section
-        class="container-fluid col-lg-9 col-sm-12 bg-dark text-light"
-        id="about"
+        class="container-fluid col-lg-9 col-sm-12 text-light"
+        id="home"
         style="position: relative"
       >
         <div class="container landing-container p-5" id="hero-container">
@@ -133,19 +142,19 @@
             </ul> -->
             <ul class="ml-1 mb-5" id="text-carousel">
               <li class="text-carousel-item border-bottom border-primary">
-                Strength 1
+                Analytical
               </li>
               <li class="text-carousel-item border-bottom border-primary">
-                Strength 2
+                Strategic
               </li>
               <li class="text-carousel-item border-bottom border-primary">
-                Strength 3
+                Learner
               </li>
               <li class="text-carousel-item border-bottom border-primary">
-                Strength 4
+                Restorative
               </li>
               <li class="text-carousel-item border-bottom border-primary">
-                Strength 5
+                Relator
               </li>
             </ul>
           </div>
@@ -186,7 +195,7 @@
       </section>
       <!-- Experience -->
       <section
-        class="container-fluid col-lg-9 col-sm-12 bg-dark text-light d-none"
+        class="container-fluid col-lg-9 col-sm-12 text-light d-none"
         id="experience"
         style="position: relative"
       >
@@ -323,7 +332,7 @@
       </section>
       <!-- Awards -->
       <section
-        class="container-fluid col-lg-9 col-sm-12 bg-dark text-light d-none"
+        class="container-fluid col-lg-9 col-sm-12 text-light d-none"
         id="awards"
         style="position: relative"
       >
@@ -382,7 +391,7 @@
       </section>
       <!-- Resume & Card -->
       <section
-        class="container-fluid col-lg-9 col-sm-12 bg-dark text-light d-none"
+        class="container-fluid col-lg-9 col-sm-12 text-light d-none"
         id="resume-and-card"
         style="position: relative"
       >
@@ -396,13 +405,15 @@
               </a>
             </sup> -->
           </h3>
+          <div class="col-12 py-3">
+            <p>
+              Please <a href="mailto:dummy@gmail.com">email me</a> if you would
+              like a copy of my resume.
+            </p>
+          </div>
           <!-- <iframe src="assets/resume.pdf" class="col-12" id="resume"></iframe> -->
           <h3 class="display-6 py-3">Card</h3>
-          <img
-            src="assets/card.png"
-            class="border border-primary col-6"
-            alt="card"
-          />
+          <img src="assets/card.png" class="col-6" alt="card" />
         </div>
       </section>
     </div>
@@ -426,8 +437,10 @@
     <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
     <script src="script.js"></script>
-    <noscript>
-      You need to enable JavaScript for this site to run properly.
+    <noscript class="text-light text-center">
+      <p class="h1">
+        You need to enable JavaScript for this site to run properly.
+      </p>
     </noscript>
   </body>
 </html>
