@@ -81,7 +81,7 @@
                 Experience
               </button>
             </li>
-            <li class="nav-item mx-2 px-2">
+            <!-- <li class="nav-item mx-2 px-2">
               <button
                 class="nav-link btn btn-secondary bg-transparent border-0 btn-block"
                 id="show-skills"
@@ -89,7 +89,7 @@
               >
                 Skills
               </button>
-            </li>
+            </li> -->
             <li class="nav-item mx-2 px-2">
               <button
                 class="nav-link btn btn-secondary bg-transparent border-0 btn-block"
@@ -106,6 +106,15 @@
                 onclick="showResumeAndCard(); $('.nav-link').removeClass('active'); $(this).addClass('active');"
               >
                 Resume & Card
+              </button>
+            </li>
+            <li class="nav-item mx-2 px-2">
+              <button
+                class="nav-link btn btn-secondary bg-transparent border-0 btn-block"
+                id="show-reflection"
+                onclick="showReflection(); $('.nav-link').removeClass('active'); $(this).addClass('active');"
+              >
+                Reflection
               </button>
             </li>
           </ul>
@@ -191,6 +200,56 @@
           >
             <ion-icon name="logo-github"></ion-icon>
           </a>
+        </div>
+      </section>
+      <!-- About -->
+      <section
+        class="container-fluid col-lg-9 col-sm-12 text-light d-none"
+        id="about"
+        style="position: relative"
+      >
+        <div class="container p-5" id="hero-container">
+          <h1 class="display-3">About</h1>
+          <h3 class="display-6 text-primary py-3">Philosophy</h3>
+          <div class="col-12 py-3">
+            My experiences as a servant leader and as a young professional have
+            guided my pursuits and attitude toward how I conduct and guide
+            myself and others. At every opportunity I get, I try to help someone
+            out, be it on something as simple as doing homework or as complex as
+            fixing their phone. In addition to this, I make sure to encourage
+            them to do the same for others. By spreading the spirit of helping
+            others, I hope to develop a community which proactively addresses
+            and solves its problems through a collective effort as a united
+            community with common goals can tackle any issue, no matter the
+            gravity.
+          </div>
+          <hr />
+          <h3 class="display-6 text-primary py-3">Future Goals</h3>
+          <div class="col-12 py-3">
+            Throughout my high school career, I have consistently sought
+            opportunities to further my leadership skills and experience. In
+            addition to being a Student Leader as part of Student Leadership
+            Johns Creek and a Student Ambassador for the Georgia Secretary of
+            State's Office, I am the Co-Founder and Captain of Northview High
+            School's Science Bowl Team and Vice President of the Northview
+            Programming Club. Each of these experiences has carried with it a
+            different set of expectations ranging from managing a team to
+            teaching a large group to leading volunteering efforts. From these
+            opportunities, I have gained invaluable lessons that have not only
+            helped develop me as a leader but also as a young professional, and
+            I believe that they will help me in my future pursuits to become an
+            AI engineer with a degree in AI from a prestigious tech university.
+          </div>
+          <hr />
+          <h3 class="display-6 text-primary py-3">Personal Mission & Vision</h3>
+          <div class="col-12 py-3">
+            From my leadership experiences, I have learned some key values of a
+            leader that I carry with me. Primarily, I strive to be a leader who
+            is not always be the smartest one in the room. I will listen to
+            those around me who are more knowledgeable and take the appropriate
+            course of action based on those inputs. In a world where one cannot
+            be the best at everything, this is an essential value of a leader.
+          </div>
         </div>
       </section>
       <!-- Experience -->
@@ -291,7 +350,7 @@
           <hr />
           <div class="col-12 py-3">
             <div class="h3">
-              <span class="saira">Head Web Design and Python Instructor</span>
+              <span class="saira">Lead Web Design and Python Instructor</span>
               <span class="text-normal float-right">Jun 2020 - Present</span>
               <br />
               <span class="h5 saira text-primary">Code Up!</span>
@@ -414,6 +473,23 @@
           <!-- <iframe src="assets/resume.pdf" class="col-12" id="resume"></iframe> -->
           <h3 class="display-6 py-3">Card</h3>
           <img src="assets/card.png" class="col-6" alt="card" />
+        </div>
+      </section>
+      <!-- Reflection -->
+      <section
+        class="container-fluid col-lg-9 col-sm-12 text-light d-none"
+        id="reflection"
+        style="position: relative"
+      >
+        <div class="container p-5" id="hero-container">
+          <h1 class="display-3">Reflection</h1>
+          <div class="col-12 py-3">
+            <a
+              href="https://docs.google.com/document/d/1eD9cpHVHPvi-0uS4Sdc2R5VWLeJOD7oPjBbFFtEAGl8/edit"
+              target="_9"
+              >Link to reflection</a
+            >.
+          </div>
         </div>
       </section>
     </div>

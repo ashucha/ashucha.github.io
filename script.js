@@ -10,11 +10,26 @@ const showHome = () => {
   window.scrollTo({ top: 0 });
   localStorage.setItem("page", "home");
   $("#home").removeClass("d-none");
+  $("#about").addClass("d-none");
   $("#experience").addClass("d-none");
   $("#skills").addClass("d-none");
   $("#awards").addClass("d-none");
   $("#resume-and-card").addClass("d-none");
+  $("#reflection").addClass("d-none");
   $("#social-btn-group").addClass("d-none");
+};
+
+const showAbout = () => {
+  window.scrollTo({ top: 0 });
+  localStorage.setItem("page", "home");
+  $("#about").removeClass("d-none");
+  $("#social-btn-group").removeClass("d-none");
+  $("#home").addClass("d-none");
+  $("#experience").addClass("d-none");
+  $("#skills").addClass("d-none");
+  $("#awards").addClass("d-none");
+  $("#resume-and-card").addClass("d-none");
+  $("#reflection").addClass("d-none");
 };
 
 const showExperience = () => {
@@ -23,9 +38,11 @@ const showExperience = () => {
   $("#experience").removeClass("d-none");
   $("#social-btn-group").removeClass("d-none");
   $("#home").addClass("d-none");
+  $("#about").addClass("d-none");
   $("#skills").addClass("d-none");
   $("#awards").addClass("d-none");
   $("#resume-and-card").addClass("d-none");
+  $("#reflection").addClass("d-none");
 };
 
 const showSkills = () => {
@@ -43,9 +60,11 @@ const showAwards = () => {
   $("#awards").removeClass("d-none");
   $("#social-btn-group").removeClass("d-none");
   $("#home").addClass("d-none");
+  $("#about").addClass("d-none");
   $("#experience").addClass("d-none");
   $("#skills").addClass("d-none");
   $("#resume-and-card").addClass("d-none");
+  $("#reflection").addClass("d-none");
 };
 
 const showResumeAndCard = () => {
@@ -54,9 +73,24 @@ const showResumeAndCard = () => {
   $("#resume-and-card").removeClass("d-none");
   $("#social-btn-group").removeClass("d-none");
   $("#home").addClass("d-none");
+  $("#about").addClass("d-none");
   $("#experience").addClass("d-none");
   $("#skills").addClass("d-none");
   $("#awards").addClass("d-none");
+  $("#reflection").addClass("d-none");
+};
+
+const showReflection = () => {
+  window.scrollTo({ top: 0 });
+  localStorage.setItem("page", "reflection");
+  $("#reflection").removeClass("d-none");
+  $("#social-btn-group").removeClass("d-none");
+  $("#home").addClass("d-none");
+  $("#about").addClass("d-none");
+  $("#experience").addClass("d-none");
+  $("#skills").addClass("d-none");
+  $("#awards").addClass("d-none");
+  $("#resume-and-card").addClass("d-none");
 };
 
 var refreshKeyPressed = false;
