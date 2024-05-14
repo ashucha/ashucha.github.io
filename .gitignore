@@ -1,4 +1,2 @@
-node_modules/
-*archive*
-*package*
-*.scss
+.vscode/
+jsconfig.json
