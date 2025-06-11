@@ -8,6 +8,7 @@
 	--light-grey: #2e2e2e;
 	--grey: #1a1a1a;
 	--dark: #101010;
+	--dark-translucent: #101010dd;
 	--extra-dark: #080808;
 	--green: #00e275;
 	--transition: 0.25s;
@@ -104,6 +105,34 @@ ion-icon {
 
 .active {
 	color: var(--dark);
+}
+
+#mobile-overlay-modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: 9999;
+	background: var(--dark-translucent);
+	display: none;
+	align-items: center;
+	justify-content: center;
+}
+
+.mobile-modal-content {
+	background: var(--grey);
+	text-align: center;
+}
+
+.mobile-modal-title {
+	color: var(--green);
+}
+
+.mobile-modal-text {
+	color: var(--light);
+	font-size: 1.1rem;
+	margin-bottom: 2rem;
 }
 
 #hero {
@@ -278,7 +307,11 @@ ion-icon {
 }
 
 .btn {
+	border: none;
+	cursor: pointer;
 	border-radius: 10px;
+	padding: 10px 20px;
+	font-weight: 700;
 }
 
 .btn-green {
@@ -337,4 +370,10 @@ hr {
 	margin: 0;
 	background-color: var(--light-grey);
 	border: none;
+}
+
+@media screen and (min-width: 768px) {
+	#mobile-overlay-modal {
+		display: flex;
+	}
 }
